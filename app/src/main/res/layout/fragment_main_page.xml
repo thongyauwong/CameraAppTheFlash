@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffcc">
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="108dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        android:typeface="serif"
+        android:text="@string/appName"
+        app:layout_constraintLeft_toLeftOf="@id/open_camera_button"
+        app:layout_constraintRight_toRightOf="@id/open_camera_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/app_image"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/closeDialog"
+        android:src="@drawable/logo"
+        app:layout_constraintLeft_toLeftOf="@id/open_camera_button"
+        app:layout_constraintRight_toRightOf="@id/open_camera_button"
+        app:layout_constraintTop_toBottomOf="@id/app_name" />
+
+    <Button
+        android:id="@+id/open_camera_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background = "@drawable/rounded_button"
+        android:drawableStart="@drawable/ic_launch_camera"
+        android:padding="10dp"
+        android:text="@string/openCamera"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_image"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <Button
+        android:id="@+id/open_album_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background = "@drawable/rounded_button"
+        android:drawableStart="@drawable/ic_launch_gallery"
+        android:padding="10dp"
+        android:text="@string/openGallery"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/open_camera_button"
+        app:layout_constraintVertical_bias="0.314" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

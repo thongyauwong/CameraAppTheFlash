@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2020 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+    <string name="app_name">The Flash!</string>
+    <string name="capture_button_alt">Capture</string>
+    <string name="switch_camera_button_alt">Switch camera</string>
+    <string name="gallery_button_alt">Gallery</string>
+    <string name="back_button_alt">Back</string>
+    <string name="share_button_alt">Share</string>
+    <string name="share_hint">Share using</string>
+    <string name="capture_mode_camera">Camera</string>
+    <string name="capture_mode_hdr">HDR</string>
+    <string name="capture_mode_night">Night</string>
+    <string name="delete_button_alt">Delete</string>
+    <string name="delete_dialog">Delete current photo?</string>
+    <string name="delete_title">Confirm</string>
+    <string name="edit_button_alt">Edit</string>
+    <string name="welcome_message">Welcome To App</string>
+    <string name="begin_text_btn">Click here to begin</string>
+    <string name="open_camera_button_alt">Open Camera</string>
+    <string name="open_album_button_alt">Choose from album</string>
+    <string name="created_at">created at</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="extract_text">T</string>
+    <string name="no_text_found">Couldn\'t Find any text in here…</string>
+    <string name="error_default_msg">Oops , Something went wrong</string>
+    <string name="camera_error_default_msg">Oops , Couldn\'t get image from camera</string>
+    <string name="appName">The Flash!</string>
+    <string name="openGallery">Open Gallery</string>
+    <string name="openCamera">Open Camera</string>
+    <string name="closeDialog">Close Dialog</string>
+    <string name="copyToClipboard">Copy To ClipBoard</string>
+    <string name="downloadingModelFiles">Downloading model files...</string>
+    <string name="translate">Translate</string>
+</resources>

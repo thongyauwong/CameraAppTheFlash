@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.example.theFlash">
+
+    <!-- Enable instant app support -->
+    <dist:module dist:instant="true" />
+
+    <!-- Declare features -->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <!-- Declare permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+<!--    <uses-permission android:name="android.permission.INTERNET" />-->
+<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+
+    <application
+        android:name="com.android.example.theFlash.MainApplication"
+        android:icon="@mipmap/ic_camera_new"
+        android:roundIcon="@mipmap/ic_camera_new_round"
+        android:label="@string/app_name"
+        android:allowBackup="true"
+        tools:ignore="AllowBackup"
+        android:largeHeap="true">
+
+        <activity
+            android:name="com.android.example.theFlash.LoadingActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.android.example.theFlash.MainActivity"
+            android:clearTaskOnLaunch="true"
+            android:theme="@style/AppTheme"
+            android:icon="@mipmap/ic_camera_new"
+            android:screenOrientation="portrait"
+            android:rotationAnimation="seamless"
+            android:resizeableActivity="true"
+            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
+            tools:targetApi="O">
+
+            <meta-data
+                android:name="com.google.mlkit.vision.DEPENDENCIES"
+                android:value="ocr" />
+
+            <!-- Register as a system camera app -->
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA"/>
+                <action android:name="android.media.action.VIDEO_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <!-- App links for http/s -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="example.android.com" />
+                <data android:pathPattern="/camerax" />
+            </intent-filter>
+
+            <!-- Declare notch support -->
+            <meta-data android:name="android.notch_support" android:value="true"/>
+
+        </activity>
+
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorStickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorTextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorDrawActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+
+        <!-- FileProvider used to share photos with other apps -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+    </application>
+
+</manifest>
