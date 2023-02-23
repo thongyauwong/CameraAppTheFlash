@@ -9,10 +9,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         applicationId "com.android.example.theFlash"
         minSdkVersion 21
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 30
         versionCode 1
         versionName "1.0.0"
-
         renderscriptTargetApi 21
         renderscriptSupportModeEnabled true
     }
@@ -45,10 +45,7 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
 
     implementation "com.airbnb.android:lottie:$lottieVersion"
-
     implementation "com.google.android.gms:play-services-mlkit-text-recognition:$mlKitVersion"
-//    implementation 'com.google.mlkit:language-id:16.0.0'
-//    implementation 'com.google.mlkit:translate:16.0.0'
     implementation 'com.google.mlkit:language-id:17.0.4'
     implementation 'com.google.mlkit:translate:17.0.1'
 
@@ -122,4 +119,7 @@ dependencies {
 
     implementation 'com.google.android.material:material:<version>'
 
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+    implementation 'com.google.ar:core:1.35.0'
+    implementation 'com.android.support:multidex:1.0.3'
 }

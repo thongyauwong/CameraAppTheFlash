@@ -63,4 +63,20 @@
         app:layout_constraintTop_toBottomOf="@+id/open_camera_button"
         app:layout_constraintVertical_bias="0.314" />
 
+    <Button
+        android:id="@+id/open_ar_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background = "@drawable/rounded_button"
+        android:drawableStart="@drawable/ic_launch_gallery"
+        android:padding="10dp"
+        android:text="      open Ar      "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/open_album_button"
+        app:layout_constraintVertical_bias="0.314" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

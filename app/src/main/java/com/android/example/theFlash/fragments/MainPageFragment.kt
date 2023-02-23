@@ -17,6 +17,7 @@ import androidx.annotation.Nullable
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import com.android.example.theFlash.ArActivity
 import com.android.example.theFlash.MainActivity
 import com.android.example.theFlash.R
 import com.android.example.theFlash.databinding.FragmentMainPageBinding
@@ -37,6 +38,7 @@ class MainPageFragment : Fragment() {
     private val internalStorageFile = "/storage/emulated/0/Android/media/com.android.example.theFlash/The Flash!"
     private val cameraPermissionRequestCode = 11
     private val storagePermissionRequestCode = 12
+    private val AR_IMAGE = 3
 
     private val cameraPermissionRequest =
         mutableListOf(
@@ -126,6 +128,19 @@ class MainPageFragment : Fragment() {
                 intent.action = Intent.ACTION_GET_CONTENT
                 startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE)
             }
+        }
+
+        fragmentMainPageBinding.openArButton.setOnClickListener {
+            val arActivityIntent =
+                Intent(
+                    this@MainPageFragment.context, ArActivity::class.java
+                )
+            startActivityForResult(
+                Intent.createChooser(
+                    arActivityIntent,
+                    "Open AR"
+                ), AR_IMAGE
+            )
         }
     }
 

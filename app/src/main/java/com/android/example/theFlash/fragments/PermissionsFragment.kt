@@ -51,9 +51,7 @@ class PermissionsFragment : Fragment() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == PERMISSIONS_REQUEST_CODE) {
-//            if (PackageManager.PERMISSION_GRANTED == grantResults.firstOrNull()) {
             if (PackageManager.PERMISSION_GRANTED == grantResults[0] && PackageManager.PERMISSION_GRANTED == grantResults[1]) {
-                // Take the user to the success fragment when permission is granted
                 Toast.makeText(context, "Permission request granted", Toast.LENGTH_LONG).show()
                 navigateToCamera()
             } else if (PackageManager.PERMISSION_GRANTED != grantResults[0] && PackageManager.PERMISSION_GRANTED == grantResults[1]){

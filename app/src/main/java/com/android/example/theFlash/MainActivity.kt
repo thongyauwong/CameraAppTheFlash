@@ -46,10 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var activityMainBinding: ActivityMainBinding
     private lateinit var navController: NavController
-    private var recyclerViewAdapter: RecyclerView.Adapter<*>? = null
-    private var recyclerView: RecyclerView? = null
     private var context: Context? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -59,16 +56,19 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.fragment_container) as NavHostFragment
         navController = navHostFragment.navController
 
-        if (recyclerViewAdapter == null) {
-            val currentFragment: Fragment? =
-                supportFragmentManager.findFragmentByTag(context.toString())
-            if (currentFragment != null) {
-                recyclerView = currentFragment.view as RecyclerView?
-            }
-            if (currentFragment != null) {
-                recyclerViewAdapter = (currentFragment.view as RecyclerView).adapter
-            }
-        }
+
+    //    private var recyclerViewAdapter: RecyclerView.Adapter<*>? = null
+//    private var recyclerView: RecyclerView? = null
+//        if (recyclerViewAdapter == null) {
+//            val currentFragment: Fragment? =
+//                supportFragmentManager.findFragmentByTag(context.toString())
+//            if (currentFragment != null) {
+//                recyclerView = currentFragment.view as RecyclerView?
+//            }
+//            if (currentFragment != null) {
+//                recyclerViewAdapter = (currentFragment.view as RecyclerView).adapter
+//            }
+//        }
     }
 
     override fun onResume() {

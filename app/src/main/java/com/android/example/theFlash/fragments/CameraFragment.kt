@@ -275,7 +275,7 @@ class CameraFragment : Fragment() {
 
         // Preview
         preview = Preview.Builder()
-            // We request aspect ratio but no resolution
+            // Request aspect ratio but no resolution
             .setTargetAspectRatio(screenAspectRatio)
             // Set initial target rotation
             .setTargetRotation(rotation)
